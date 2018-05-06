@@ -1,12 +1,10 @@
 const login = require("facebook-chat-api");
-// var sql = require('sqlite');
 const fs = require("fs");
 var api = require('./scr/assets/const.js').api;
 var request = require('request');
 var uriencode = require('urlencode');
-let database = JSON.parse(fs.readFileSync("./geiiixxd/pp/score.json", "utf8"));
+let database = JSON.parse(fs.readFileSync("./chatbotmess/pp/score.json", "utf8"));
 var wikicustomsearch = api.GOOGLESEARCH;
-// sql.open("./geiiixxd/pp/score.sqlite");
 var func = require('./scr/assets/func.js');
 var Suspend = {};
 var playerAPI = api.PLAYERAPI;
@@ -88,7 +86,7 @@ login({
                             }],
                         }, event.threadID);
                     }
-                    fs.writeFile("./geiiixxd/pp/score.json", JSON.stringify(database), (err) => {
+                    fs.writeFile("./chatbotmess/pp/score.json", JSON.stringify(database), (err) => {
                         if (err) console.error(err);
                     });
                     if (event.body.indexOf('$kick') == 0) {
