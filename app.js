@@ -3,7 +3,7 @@ const fs = require("fs");
 var api = require('./scr/assets/const.js').api;
 var request = require('request');
 var uriencode = require('urlencode');
-let database = JSON.parse(fs.readFileSync("./chatbotmess/pp/score.json", "utf8"));
+let database = JSON.parse(fs.readFileSync("/root/botmess/chatbotmess/pp/score.json", "utf8"));
 var wikicustomsearch = api.GOOGLESEARCH;
 var func = require('./scr/assets/func.js');
 var Suspend = {};
@@ -86,7 +86,7 @@ login({
                             }],
                         }, event.threadID);
                     }
-                    fs.writeFile("./chatbotmess/pp/score.json", JSON.stringify(database), (err) => {
+                    fs.writeFile("/root/botmess/chatbotmess/pp/score.json", JSON.stringify(database), (err) => {
                         if (err) console.error(err);
                     });
                     if (event.body.indexOf('$kick') == 0) {
