@@ -1,5 +1,5 @@
 const login = require("facebook-chat-api");
-var sql = require('sqlite');
+// var sql = require('sqlite');
 const fs = require("fs");
 var api = require('./scr/assets/const.js').api;
 var request = require('request');
